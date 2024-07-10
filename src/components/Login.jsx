@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from '../App.module.css'
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate(); 
   return (
     <div>
         <div className={styles.navbar}>
@@ -10,14 +12,15 @@ const Login = () => {
         </div>
         <div className={styles.list}>
           <ul>
-            <li>Home</li>
-            <li>Contact</li>
-            <li>About</li>
-            <li>Sign Up</li>
+          <li><a href="/">Home</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="reviews">Reviews</a></li>
           </ul>
         </div>
         <div className={styles.btn}>
-          <button>Sign Up</button>
+          <button onClick={() =>  
+            { navigate('/signup') }}>Sign Up</button>
         </div>
       </div>
       <div className={styles.left}>

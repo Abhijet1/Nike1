@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.box{
+    width: 70vw;
+    margin: 30px auto;
+}
+
+.message h4{
+    margin-top: 40px;
+    font-weight: bold;
+}

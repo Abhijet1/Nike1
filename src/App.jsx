@@ -6,6 +6,7 @@ import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Payment from './components/Payment'
 import Details from './components/Details'
+import Reviews from './Reviews';
 
 const App = () => {
   return (
@@ -16,6 +17,8 @@ const App = () => {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/payment" element={<Payment />} />
       <Route path="/details" element={<Details />} />
+      <Route path="/reviews" element={<Reviews />} />
+
     </Routes>
     </>
   )

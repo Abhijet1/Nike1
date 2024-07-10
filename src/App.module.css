@@ -18,16 +18,16 @@
     gap: 30px;
 }
 
-li {
+li a{
     color: #130f0f;
     border-bottom: 2px solid red;
     border: hidden;
+    text-decoration: none;
 }
 
-li:hover {
+li a:hover {
     color: red;
     border-bottom: 2px solid red;
-    transform: translateY(-6px)
 }
 
 .btn {
@@ -86,6 +86,7 @@ li:hover {
 
 .inner img{
     width: 100%;
+    border-radius: 6px;
     height: 100%;
 }
 
@@ -102,13 +103,17 @@ footer {
 }
 .left img{
     width: 900px;
-    height: 600px;
+    height: 600px; 
 }
+
+/* .red-shoe{
+    filter: drop-shadow(10px 10px 10px black);
+} */
 
 form{
     display: flex;
-    margin: 120px auto;
-    /* background-color: #ee7e7e; */
+    margin: 90px auto;
+    margin-left: 20px;
     flex-direction: column;
     height: 500px;
 }
@@ -123,9 +128,28 @@ form h3{
     margin-bottom: 20px;
 }
 form input{
+    width: 440px;
     outline: none;
     margin-top: 15px;
     line-height: 30px;
     border: none;
+    padding: 10px;
     border-bottom: 2px solid rgb(221, 220, 220);
 }
+form button{
+    margin-top: 20px;
+    outline: hidden;
+    border: hidden;
+    height: 45px;
+    border-radius: 6px;
+    background-color: #e6cfcf;
+}
+form p{
+    text-align: center;
+    margin-top: 20px;
+}
+form p a{
+    text-decoration: none;
+    color: rgb(234, 8, 8);
+}
+

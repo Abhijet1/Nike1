@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Carousel } from 'react-bootstrap';
 import styles from './App.module.css'
 import { ShoeData } from './ShoeData';
@@ -9,6 +9,8 @@ import { useNavigate } from "react-router-dom";
 const App = () => {
     
     const navigate = useNavigate(); 
+    const [front, setFront] = useState();
+    console.log('hello===>>>', front, ShoeData)
   return (
     <>
       <div className={styles.navbar}>
@@ -17,10 +19,10 @@ const App = () => {
         </div>
         <div className={styles.list}>
           <ul>
-            <li>Home</li>
-            <li>Contact</li>
-            <li>About</li>
-            <li>Sign Up</li>
+          <li><a href="/">Home</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="reviews">Reviews</a></li>
           </ul>
         </div>
         <div className={styles.btn}>
@@ -73,8 +75,10 @@ const App = () => {
           ShoeData.map((shoe, i) => {
             return <ShoeCard
               key={i}
-              url={shoe.url}
+              url={front === shoe.id ? shoe.url : shoe.url2}
               label={shoe.name}
+              shoe={shoe}
+              setFront={setFront}
             />
           })
         }
