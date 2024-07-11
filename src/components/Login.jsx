@@ -19,6 +19,7 @@ const Login = () => {
           </ul>
         </div>
         <div className={styles.btn}>
+          <div style={{width:"100px"}}></div>
           <button onClick={() =>  
             { navigate('/signup') }}>Sign Up</button>
         </div>

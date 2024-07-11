@@ -1,15 +1,61 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
 }
 
-.box{
+.box {
     width: 70vw;
     margin: 30px auto;
 }
 
-.message h4{
+.message h4 {
     margin-top: 40px;
     font-weight: bold;
+}
+
+.review {
+    margin: 50px auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    height: 380px;
+    border: 1px solid rgb(205, 199, 199);
+}
+
+.user input {
+    padding: 15px;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+    margin-top: 15px;    
+    border-radius: 8px;
+
+}
+
+.user textarea {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 15px;    
+    border-radius: 8px;
+}
+
+.user button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px auto;
+    border: hidden;
+    height: 45px;
+    width: 30%;
+    border-radius: 8px;
+    background-color: #e6cfcf;
+}
+
+.user{
+    margin: auto 15px;
+}
+.user h4{
+    text-align: center;
 }

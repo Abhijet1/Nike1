@@ -7,6 +7,8 @@ import SignUp from './components/SignUp';
 import Payment from './components/Payment'
 import Details from './components/Details'
 import Reviews from './Reviews';
+import Contact from './components/Contact';
+import About from './components/About';
 
 const App = () => {
   return (
@@ -18,6 +20,8 @@ const App = () => {
       <Route path="/payment" element={<Payment />} />
       <Route path="/details" element={<Details />} />
       <Route path="/reviews" element={<Reviews />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/about" element={<About />} />
 
     </Routes>
     </>

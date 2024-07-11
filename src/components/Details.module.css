@@ -1,0 +1,22 @@
+.box{
+    display: flex;
+    width: 660px;
+    height: 495px;
+    background-color: #efe8e8;
+}
+.small{
+    display: flex;
+    flex-direction: column;
+}
+.small img{
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    margin: 10px;
+}
+.big img{
+    width: 450px;
+    height: 450px;
+    margin: 5px;    
+    background-color: #fff;
+}
