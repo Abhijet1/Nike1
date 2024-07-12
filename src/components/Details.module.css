@@ -1,22 +1,101 @@
 .box{
+    margin-top: 80px;
     display: flex;
     width: 660px;
     height: 495px;
-    background-color: #efe8e8;
+    border-radius: 6px;
+    background-color: #f3ecec;
+}
+.info{
+    margin-top: 80px;
+    /* display: flex; */
+    width: 660px;
+    height: 495px;
+    border-radius: 6px;
+    /* background-color: #f3ecec; */
 }
 .small{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 10px;
 }
 .small img{
     width: 150px;
     height: 150px;
+    border-radius: 6px;
+    border: 1px solid white;
     background-color: #fff;
-    margin: 10px;
 }
 .big img{
-    width: 450px;
-    height: 450px;
-    margin: 5px;    
+    width: 480px;
+    border-radius: 6px;
+    height: 470px;
+    border: 1px solid white;
     background-color: #fff;
+}
+.big{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.similar{
+    margin-top: 50px;
+}
+.similar h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.size{
+    margin-top: 25px;
+    display: flex;
+}
+.size input{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.size label{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 4px;
+}
+.counter{
+    margin-top: 25px;
+    display: flex;
+
+}
+.counter button{
+    width: 50px;
+    background-color: orange;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 5px;
+}
+.counter h3{
+    border: 3px solid rgb(218, 183, 120);
+    margin-left: 1px;
+    width: 70px;
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
+    background-color: #fff;
+    height: 50px;
+    padding: 15px;
+    align-items: center;
+}
+.buy{
+    margin-top: 25px;
+}
+.buy button{
+    margin-right: 30px;
+    width: 45%;
+    background-color: orange;
+    border-radius: 6px;
+    color: white;
+    font-size: 25px;
+    height: 55px;
 }

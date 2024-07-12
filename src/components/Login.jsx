@@ -35,6 +35,51 @@ const Login = () => {
             <button type="submit">Forgot Password</button>
         </form>
       </div>
+      <footer>
+        <p style={{ marginTop: "5px" }}>CopyRight@2024</p>
+        <div className={styles.links}>
+        <section>
+            <h3>Support</h3>
+            <p>111, Bijoy Colony</p>
+            <p>nike@support.com</p>
+            <p>32123113213221</p>
+            <p>Get 10% off</p>
+          </section>
+          <section>
+            <h3>Exclusive </h3>
+            <p>Subscribe</p>
+            <p>Get 10% off</p>
+            <p>Map</p>
+          </section>
+          <section>
+            <h3>Support</h3>
+            <p>111, Bijoy Colony</p>
+            <p>nike@support.com</p>
+            <p>32123113213221</p>
+            <p>Get 10% off</p>
+          </section>
+          <section>
+            <h3>Account</h3>
+            <p>My Account</p>
+            <p>Login/Register</p>
+            <p>Cart</p>
+          </section>
+          <section>
+            <h3>Quick Links</h3>
+            <p>Privacy Policy</p>
+            <p>Terms of Use</p>
+            <p>FAQ</p>
+            <p>Contact</p>
+          </section>
+          <section>
+            <h3>Support</h3>
+            <p>111, Bijoy Colony</p>
+            <p>nike@support.com</p>
+            <p>32123113213221</p>
+            <p>Get 10% off</p>
+          </section>
+        </div>
+      </footer>
     </div>
   )
 }
