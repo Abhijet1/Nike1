@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "../App.module.css";
+import styles from "./Shoe.module.css";
 import { useNavigate } from "react-router-dom";
 
-const ShoeCard = ({ url, label, shoe, setFront, onClick }) => {
+const NewShoeCard = ({ url, label, shoe, setFront, onClick }) => {
   const navigate = useNavigate();
 
   return (
@@ -22,4 +22,4 @@ const ShoeCard = ({ url, label, shoe, setFront, onClick }) => {
   );
 };
 
-export default ShoeCard;
+export default NewShoeCard;

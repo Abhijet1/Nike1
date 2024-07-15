@@ -9,6 +9,7 @@ import Details from './components/Details'
 import Reviews from './Reviews';
 import Contact from './components/Contact';
 import About from './components/About';
+import Products from './components/Products';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Route path="/reviews" element={<Reviews />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/about" element={<About />} />
+      <Route path="/products" element={<Products />} />
 
     </Routes>
     </>

@@ -24,6 +24,18 @@ const About = () => {
           <button onClick={() => { navigate(`/signup`) }}>Sign Up</button>
         </div>
       </div>
+      <div className={styles.about}>
+        <div className={styles.left1}>
+        <h1 style={{textAlign:"center"}}>About Us</h1>
+          <h4>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat molestias a laboriosam! Nesciunt ab corporis voluptates dolorum tenetur tempore veritatis sed magni, consequatur facilis expedita natus saepe quas corrupti nostrum quibusdam soluta fugiat ad. Voluptatum at, atque quos voluptatem officiis deleniti ipsa error molestias perferendis corporis, veniam debitis nesciunt quas!
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat molestias a laboriosam! Nesciunt.
+          </h4>
+        </div>
+        <div className={styles.right1}>
+          <img src="https://media.istockphoto.com/id/1286378180/vector/website-information-concept.jpg?s=612x612&w=0&k=20&c=6v9Hcbp0zp5itIPIywobPQF13YsHIQ4j_srF5VbQusY=" alt="" />
+        </div>
+      </div>
+
       <footer>
         <p style={{ marginTop: "5px" }}>CopyRight@2024</p>
         <div className={styles.links}>

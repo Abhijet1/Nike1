@@ -4,15 +4,12 @@
     width: 660px;
     height: 495px;
     border-radius: 6px;
-    background-color: #f3ecec;
 }
 .info{
     margin-top: 80px;
-    /* display: flex; */
     width: 660px;
     height: 495px;
     border-radius: 6px;
-    /* background-color: #f3ecec; */
 }
 .small{
     display: flex;
@@ -34,6 +31,9 @@
     border: 1px solid white;
     background-color: #fff;
 }
+.big img:hover{
+    scale: 1.15;
+}
 .big{
     display: flex;
     justify-content: center;
@@ -52,9 +52,10 @@
     display: flex;
 }
 .size input{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     margin-left: 10px;
+    margin-top: 7px;
     margin-right: 10px;
 }
 .size label{
@@ -69,6 +70,7 @@
 
 }
 .counter button{
+    height: 52px;
     width: 50px;
     background-color: orange;
     font-size: 30px;
@@ -80,7 +82,7 @@
     margin-left: 1px;
     width: 70px;
     display: flex;
-    margin-top: 5px;
+    margin-top: 2px;
     justify-content: center;
     background-color: #fff;
     height: 50px;
