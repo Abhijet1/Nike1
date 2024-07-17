@@ -57,7 +57,7 @@ const Contact = () => {
           <label htmlFor="name" className="lable1">
             Name
           </label>
-          <input
+          <input style={{width:"100%"}}
             type="name"
             className="input1"
             value={formdata.name}
@@ -66,7 +66,7 @@ const Contact = () => {
           <label htmlFor="Mobile" className="lable1">
             Mobile Number
           </label>
-          <input
+          <input style={{width:"100%"}}
             type="Mobile"
             className="input1"
             value={formdata.mobNo}
@@ -77,7 +77,7 @@ const Contact = () => {
           <label htmlFor="email" className="lable1">
             E-mail
           </label>
-          <input
+          <input style={{width:"100%"}}
             type="email"
             name="email"
             className="input1"
@@ -87,7 +87,7 @@ const Contact = () => {
             }
           />
           <label htmlFor="textarea">Text</label>
-          <textarea
+          <textarea style={{width:"100%"}}
             name="text"
             id="text"
             rows={3}

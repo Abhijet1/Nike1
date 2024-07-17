@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 const App = () => {
   const navigate = useNavigate();
   const [front, setFront] = useState();
+  
   return (
     <>
       <div className={styles.navbar}>
@@ -55,7 +56,7 @@ const App = () => {
               src="https://img.pikbest.com/origin/06/39/82/47ppIkbEsT7dJ.jpg!sw800"
               alt="First slide"
               onClick={() => {
-                navigate(`/details`);
+                navigate(`/details?shoe=9`);
               }}
             />
           </Carousel.Item>
@@ -65,7 +66,7 @@ const App = () => {
               src="https://png.pngtree.com/png-clipart/20220419/original/pngtree-national-day-sports-shoes-promotion-rotation-banner-png-image_7535317.png"
               alt="Second slide"
               onClick={() => {
-                navigate(`/details`);
+                navigate(`/details?shoe=10`);
               }}
             />
           </Carousel.Item>
@@ -75,7 +76,7 @@ const App = () => {
               src="https://i.pinimg.com/736x/fa/45/96/fa4596ad9a9d39901eeb455ed4f74e44.jpg"
               alt="Third slide"
               onClick={() => {
-                navigate(`/details`);
+                navigate(`/details?shoe=11`);
               }}
             />
           </Carousel.Item>
@@ -115,6 +116,11 @@ const App = () => {
           );
         })}
       </div>
+      <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
+          <button style={{width:"250px", backgroundColor:"orange", color:"white", borderRadius:"6px", marginTop:"15px"}} onClick={() => {
+            navigate(`/products`);
+          }}>See All</button>
+          </div>
       <footer>
         <p style={{ marginTop: "5px" }}>CopyRight@2024</p>
         <div className={styles.links}>

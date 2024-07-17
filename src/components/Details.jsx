@@ -6,19 +6,20 @@ import ShoeCard from "../components/ShoeCard";
 import { useNavigate } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
 
-const Details = () => {
+const Details = ({ setCartData }) => {
   const [image, setImage] = useState();
   const navigate = useNavigate();
   const [count, setCount] = useState(1);
   const [selectedOption, setSelectedOption] = useState();
   const [searchParams, setSearchParams] = useSearchParams();
   const params = searchParams.get("shoe");
-  const [shoe, setShoe] = useState()
+  const [shoe, setShoe] = useState();
 
   useEffect(() => {
-      const dt = ShoeData.find((item) => item.id == params);
-      setShoe(dt)
-      setImage(dt?.url1)
+    window.scrollTo(0, 0);
+    const dt = ShoeData.find((item) => item.id == params);
+    setShoe(dt);
+    setImage(dt?.url1);
   }, [params]);
 
   const IncNum = () => {
@@ -80,23 +81,17 @@ const Details = () => {
             <img
               src={shoe?.url1}
               alt=""
-              onClick={() =>
-                handleClickedImage(shoe?.url1)
-              }
+              onClick={() => handleClickedImage(shoe?.url1)}
             />
             <img
               src={shoe?.url2}
               alt=""
-              onClick={() =>
-                handleClickedImage(shoe?.url2)
-              }
+              onClick={() => handleClickedImage(shoe?.url2)}
             />
             <img
               src={shoe?.url3}
               alt=""
-              onClick={() =>
-                handleClickedImage(shoe.url3)
-              }
+              onClick={() => handleClickedImage(shoe.url3)}
             />
           </div>
           <div className={styles1.big}>
@@ -156,7 +151,14 @@ const Details = () => {
             <button onClick={IncNum}>+</button>
           </div>
           <div className={styles1.buy}>
-            <button>Buy Now</button>
+            <button
+              onClick={() => {
+                setCartData((prevData) => [...prevData, shoe]);
+                navigate(`/payment`);
+              }}
+            >
+              Buy Now
+            </button>
             <button>Add To Cart</button>
           </div>
         </div>
@@ -175,6 +177,28 @@ const Details = () => {
               />
             );
           })}
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <button
+            style={{
+              width: "250px",
+              backgroundColor: "orange",
+              color: "white",
+              borderRadius: "6px",
+              marginTop: "15px",
+            }}
+            onClick={() => {
+              navigate(`/products`);
+            }}
+          >
+            See All
+          </button>
         </div>
       </div>
       <footer>
