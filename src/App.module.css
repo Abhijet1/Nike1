@@ -193,3 +193,17 @@ form p a{
     margin-left: -50px;
     margin-top: 100px;
 }
+
+.btn input {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ddd;
+    padding: 6px;
+}
+.btn input:focus{
+    border: none;
+    outline: 1px solid gray;
+    background-color: #fff;
+}

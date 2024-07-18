@@ -101,7 +101,7 @@ const Details = ({ setCartData }) => {
         <div className={styles1.info}>
           <h1>{shoe?.name}</h1>
           <a href="/reviews">(145 reviews)</a>
-          <h2 style={{ marginTop: "20px" }}>₹ {shoe?.price}</h2>
+          <h2 style={{ marginTop: "20px" }}>₹ {shoe?.price}.00</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quam
             nemo error provident, perspiciatis dolorum vero esse sapiente
@@ -146,9 +146,9 @@ const Details = ({ setCartData }) => {
             />
           </div>
           <div className={styles1.counter}>
-            <button onClick={DecNum}>-</button>
+            {/* <button onClick={DecNum}>-</button>
             <h3>{count}</h3>
-            <button onClick={IncNum}>+</button>
+            <button onClick={IncNum}>+</button> */}
           </div>
           <div className={styles1.buy}>
             <button

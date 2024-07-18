@@ -64,15 +64,12 @@ const SignUp = () => {
           >
             Sign Up
           </button>
-          {/* <button style={{backgroundColor:"white", width:"88%", color:"black", border:"1px solid gray", display:"flex", justifyContent:"center", alignItems:"center"}} type="submit">
-              <img style={{width:"23px", height:"23px", marginRight:"15px"}} src="https://www.svgrepo.com/show/353812/google-gmail.svg" alt="asd" />
-              Sign Up With Google</button> */}
           <div style={{ width: "88%", marginTop: "15px" }}>
             {" "}
             <GoogleLogin
               onSuccess={(credentialResponse) => {
                 const credentialResponseDecoded = jwtDecode(credentialResponse.credential)
-                console.log(credentialResponseDecoded);
+                navigate('/');
               }}
               onError={() => {
                 console.log("Login Failed");

@@ -5,44 +5,53 @@ import { useNavigate } from "react-router-dom";
 import { CartData } from "./CartItems";
 import { useSearchParams } from "react-router-dom";
 
-const Payment = ({ cartData, setCartData }) => {
+const Payment = ({ cartData, setCartData, total, setTotal }) => {
   const [formdata, setFormdata] = useState({});
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
+  const [selectedOption, setSelectedOption] = useState();
   const params = searchParams.get("shoe");
-  const [shoe, setShoe] = useState()
+  const [shoe, setShoe] = useState();
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
-      const dt = CartData.find((shoe) => shoe.id == params);
-      setShoe(dt)
+    const dt = CartData.find((shoe) => shoe.id == params);
+    setShoe(dt);
   }, [params]);
 
-  // useEffect(() => {
-  //   setCartData(CartData.map(shoe => ({ ...shoe, quantity: 1 })));
-  // }, []);
-  console.log("carddddd", cartData)
+  useEffect(() => {
+    let sum = 0;
+    cartData.forEach((item) => {
+      sum += item.price;
+    });
+
+    setTotal(sum);
+  }, [cartData]);
 
   const addToCart = (id) => {
-    const itemToAdd = ShoeData.find(item => item.id === id);
+    const itemToAdd = ShoeData.find((item) => item.id === id);
     if (itemToAdd) {
-      const updatedCart = [...cartdata, { ...itemToAdd, quantity: 1 }];
+      const updatedCart = [...cartData, { ...itemToAdd, quantity: 1 }];
       setCartData(updatedCart);
     }
   };
+  const handleCheckboxChange = (option) => {
+    setSelectedOption(option);
+    console.log(setSelectedOption);
+  };
 
-  
   const handleDelete = (id) => {
     if (id > 0) {
       if (window.confirm("Are you sure to delete this item?")) {
-        const dt = cartdata.filter((shoe) => shoe.id !== id);
+        const dt = CartData.filter((shoe) => shoe.id !== id);
         setCartData(dt);
         console.log(dt);
       }
     }
   };
   const handleOnSubmit = () => {
-    console.log(formdata);
+    // console.log(formdata);
   };
   const handleQuantityChange = (id, newQuantity) => {
     const updatedData = cartdata.map((shoe) => {
@@ -52,7 +61,7 @@ const Payment = ({ cartData, setCartData }) => {
       return shoe;
     });
     setCartData(updatedData);
-  }
+  };
   return (
     <div>
       <div className={styles.navbar}>
@@ -203,22 +212,40 @@ const Payment = ({ cartData, setCartData }) => {
             </button>
           </form>
         </div>
-        <div className={styles.cart} style={{ width: "600px" }}>
+        <div
+          className={styles.cart}
+          style={{ width: "600px", alignItems: "center", marginTop: "50px" }}
+        >
           <div className="tab-mar">
             <table className="table table-hover">
               <thead>
                 <tr>
+                  <td>Action</td>
                   <td>Sr.no</td>
                   <td>Item</td>
                   <td>Name</td>
-                  {/* <td>Quantity</td> */}
-                  <td>Remove</td>
+                  <td>Price</td>
                 </tr>
               </thead>
               <tbody>
                 {cartData.map((shoe, index) => {
                   return (
                     <tr key={index}>
+                      <td>
+                        <button
+                          className="btn btn-danger"
+                          onClick={() => handleDelete(shoe.id)}
+                          style={{
+                            backgroundColor: "transparent",
+                            border: "none",
+                            color: "black",
+                            marginLeft: "-10px",
+                            marginTop: "-10px",
+                          }}
+                        >
+                          x
+                        </button>
+                      </td>
                       <td>{index + 1}</td>
                       <td>
                         <img
@@ -228,56 +255,101 @@ const Payment = ({ cartData, setCartData }) => {
                         />
                       </td>
                       <td>{shoe.name}</td>
-                      {/* <td>
-                        <div style={{ display: "flex", marginLeft: "-15px" }}>
-                          <button
-                            style={{
-                              width: "30px",
-                              height: "30px",
-                              backgroundColor: "orange",
-                              borderRadius: "50%",
-                            }}
-                            onClick={() =>
-                              handleQuantityChange(shoe.id, shoe.quantity - 1)
-                            }
-                          >
-                            -
-                          </button>
-                          <h3 style={{ marginLeft: "10px" }}>{shoe.quantity}</h3>
-                          <button
-                            style={{
-                              width: "30px",
-                              height: "30px",
-                              backgroundColor: "orange",
-                              borderRadius: "50%",
-                            }}
-                            onClick={() =>
-                              handleQuantityChange(shoe.id, shoe.quantity + 1)
-                            }
-                          >
-                            +
-                          </button>
-                        </div>
-                      </td> */}
-                      <td>
-                        <button
-                          className="btn btn-danger"
-                          onClick={() => handleDelete(shoe.id)}
-                          style={{
-                            backgroundColor: "transparent",
-                            border: "none",
-                            color: "black",
-                            marginLeft:"-10px"
-                          }}
-                        >
-                          x
-                        </button>
-                      </td>
+                      <td>{shoe.price}.00</td>
                     </tr>
                   );
                 })}
               </tbody>
             </table>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <h5>Sub Total</h5>
+              <h6 style={{ marginRight: "60px" }}>₹{total}.00</h6>
+            </div>
+            <div
+              style={{
+                width: "100%",
+                height: "1px",
+                backgroundColor: "#ccc",
+                margin: "15px 0",
+              }}
+            ></div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <h5>Shipping</h5>
+              <h6 style={{ marginRight: "60px" }}>Free</h6>
+            </div>
+            <div
+              style={{
+                width: "100%",
+                height: "1px",
+                backgroundColor: "#ccc",
+                margin: "15px 0",
+              }}
+            ></div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <h5>Total</h5>
+              <h6 style={{ marginRight: "60px" }}>₹{total}.00</h6>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                marginTop: "15px",
+                lineHeight: "2",
+              }}
+            >
+              <div>
+                <input
+                  type="radio"
+                  name="Bank"
+                  id="Bank"
+                  checked={selectedOption === "option1"}
+                  onChange={() => handleCheckboxChange("option1")}
+                />
+                <label style={{ marginLeft: "20px" }} htmlFor="Bank">
+                  Bank
+                </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="Cash"
+                  id="Cash "
+                  checked={selectedOption === "option2"}
+                  onChange={() => handleCheckboxChange("option2")}
+                />
+                <label style={{ marginLeft: "20px" }} htmlFor="Cash">
+                  Cash on Delivery
+                </label>
+              </div>
+            </div>
+            <button
+              style={{
+                backgroundColor: "orange",
+                width: "100%",
+                borderRadius: "6px",
+                marginTop: "15px",
+              }}
+              type="submit"
+              onClick={() => {
+                navigate("/order");
+              }}
+            >
+              Place Order
+            </button>
+            <button
+              style={{
+                backgroundColor: "orange",
+                width: "100%",
+                borderRadius: "6px",
+                marginTop: "15px",
+              }}
+              type="submit"
+              onClick={() => {
+                navigate("/products");
+              }}
+            >
+              Add More Items
+            </button>
           </div>
         </div>
       </div>

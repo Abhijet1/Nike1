@@ -32,6 +32,7 @@ const App = () => {
           </ul>
         </div>
         <div className={styles.btn}>
+          
           <button
             onClick={() => {
               navigate(`/login`);
