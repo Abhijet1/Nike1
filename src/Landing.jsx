@@ -26,9 +26,9 @@ const App = () => {
             <li>
               <a href="about">About</a>
             </li>
-            <li>
+            {/* <li>
               <a href="reviews">Reviews</a>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className={styles.btn}>

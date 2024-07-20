@@ -29,7 +29,7 @@ const Contact = () => {
               <a href="about">About</a>
             </li>
             <li>
-              <a href="reviews">Reviews</a>
+              {/* <a href="reviews">Reviews</a> */}
             </li>
           </ul>
         </div>
