@@ -5,12 +5,14 @@ import { useNavigate } from "react-router-dom";
 import { CartData } from "./CartItems";
 import { useSearchParams } from "react-router-dom";
 
-const Payment = ({ cartData, setCartData, total, setTotal }) => {
+const Payment = ({ cartData, setCartData, total, setTotal, selectedSize, setSelectedSize }) => {
   const [formdata, setFormdata] = useState({});
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-  const [selectedOption, setSelectedOption] = useState();
+  const [selectedOption, setSelectedOption] = useState('option1');
+  const [payment, setPayment] = useState()
   const params = searchParams.get("shoe");
+  // const selectedSize = searchParams.get("size");
   const [shoe, setShoe] = useState();
 
 
@@ -20,48 +22,52 @@ const Payment = ({ cartData, setCartData, total, setTotal }) => {
     setShoe(dt);
   }, [params]);
 
+
+
   useEffect(() => {
     let sum = 0;
     cartData.forEach((item) => {
-      sum += item.price;
+      sum += item.price;    
     });
-
+    
     setTotal(sum);
   }, [cartData]);
 
-  const addToCart = (id) => {
-    const itemToAdd = ShoeData.find((item) => item.id === id);
-    if (itemToAdd) {
-      const updatedCart = [...cartData, { ...itemToAdd, quantity: 1 }];
-      setCartData(updatedCart);
-    }
-  };
+  // const addToCart = (id) => {
+  //   const itemToAdd = ShoeData.find((item) => item.id === id);
+  //   if (itemToAdd) {
+  //     const updatedCart = [...cartData, { ...itemToAdd, quantity: 1 }];
+  //     setCartData(updatedCart);
+  //   }
+  // };
   const handleCheckboxChange = (option) => {
     setSelectedOption(option);
-    console.log(setSelectedOption);
+    // console.log('pppp', setSelectedOption);
   };
 
-  const handleDelete = (id) => {
-    if (id > 0) {
-      if (window.confirm("Are you sure to delete this item?")) {
-        const dt = CartData.filter((shoe) => shoe.id !== id);
-        setCartData(dt);
-        console.log(dt);
-      }
-    }
-  };
+  // const handleDelete = (id) => {
+  //   if (id > 0) {
+  //     if (window.confirm("Are you sure to delete this item?")) {
+  //       const dt = CartData.filter((shoe) => shoe.id !== id);
+  //       setCartData(dt);
+  //       console.log(dt);
+  //     }
+  //   }
+  // };
+
+
   const handleOnSubmit = () => {
     // console.log(formdata);
   };
-  const handleQuantityChange = (id, newQuantity) => {
-    const updatedData = cartdata.map((shoe) => {
-      if (shoe.id === id) {
-        return { ...shoe, quantity: newQuantity };
-      }
-      return shoe;
-    });
-    setCartData(updatedData);
-  };
+  // const handleQuantityChange = (id, newQuantity) => {
+  //   const updatedData = cartData.map((shoe) => {
+  //     if (shoe.id === id) {
+  //       return { ...shoe, quantity: newQuantity };
+  //     }
+  //     return shoe;
+  //   });
+  //   setCartData(updatedData);
+  // };
   return (
     <div>
       <div className={styles.navbar}>
@@ -220,32 +226,18 @@ const Payment = ({ cartData, setCartData, total, setTotal }) => {
             <table className="table table-hover">
               <thead>
                 <tr>
-                  <td>Action</td>
                   <td>Sr.no</td>
                   <td>Item</td>
                   <td>Name</td>
+                  <td>Size</td>
                   <td>Price</td>
                 </tr>
               </thead>
               <tbody>
                 {cartData.map((shoe, index) => {
+                  console.log('>>>',shoe);
                   return (
                     <tr key={index}>
-                      <td>
-                        <button
-                          className="btn btn-danger"
-                          onClick={() => handleDelete(shoe.id)}
-                          style={{
-                            backgroundColor: "transparent",
-                            border: "none",
-                            color: "black",
-                            marginLeft: "-10px",
-                            marginTop: "-10px",
-                          }}
-                        >
-                          x
-                        </button>
-                      </td>
                       <td>{index + 1}</td>
                       <td>
                         <img
@@ -255,6 +247,8 @@ const Payment = ({ cartData, setCartData, total, setTotal }) => {
                         />
                       </td>
                       <td>{shoe.name}</td>
+                      <td>{shoe.selectedSize}</td>
+
                       <td>{shoe.price}.00</td>
                     </tr>
                   );

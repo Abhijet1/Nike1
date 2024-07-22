@@ -6,22 +6,12 @@ export const ShoeData = [
     url3: "https://contents.mediadecathlon.com/p2393847/4d2cc2c91fbaeec4a0a3a00af395c64a/p2393847.jpg?format=auto&quality=70&f=650x0",
     name: "Mountaineer",
     price: 4599.0,
-    // comment: [
-    //   {
-    // id: 1,
     userName1: "Mahesh Patil",
     date1: "12/04/2024",
-    review1:
-      "Magnjum psum dolor, sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident",
-    // },
-    // {
-    //id: 2,
-    userName2: "Mahesh Patil",
-    date2: "12/04/2024",
-    review2:
-      "Magnjum psum dolor, sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident",
-    //   },
-    // ],
+    review1: "Magnjum psum dolor, sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident",
+    userName2: "Sachin Tendulkar",
+    date2: "10/07/2023",
+    review2: "sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident",
   },
   {
     id: "2",
@@ -30,23 +20,20 @@ export const ShoeData = [
     url3: "https://contents.mediadecathlon.com/p2393894/ae11c369077717da979826d33db65b1c/p2393894.jpg?format=auto&quality=70&f=650x0",
     name: "Villager",
     price: 5599.0,
-    comment: [
-      {
-        id: 1,
-        userName: "Mahesh Patil",
-        date: "12/04/2024",
-        review:
+    userName1: "Mahesh Patil",
+        date1: "12/04/2024",
+        review1:
+          "Magnjum psum dolor, sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident",
+      // },
+      // {
+        // id: 2,
+        userName2: "Mahesh Patil",
+        date2: "12/04/2024",
+        review2:
           "Magnjum psum dolor, sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident",
       },
-      {
-        id: 2,
-        userName: "Mahesh Patil",
-        date: "12/04/2024",
-        review:
-          "Magnjum psum dolor, sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident",
-      },
-    ],
-  },
+  //   ],
+  // },
   {
     id: "3",
     url1: "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/k/o/d/-original-imagpb4z8kz7de9z.jpeg?q=70",
@@ -54,23 +41,16 @@ export const ShoeData = [
     url3: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXppLZDf41OtUMs4wbzCIAFUCUiGAlOBAuB8bWDAfKf2fS5TTrawHumupcrs7w3SUkh7U&usqp=CAU",
     name: "Cycler",
     price: 4999.0,
-    comment: [
-      {
-        id: 1,
-        userName: "Mahesh Patil",
-        date: "12/04/2024",
-        review:
+    userName1: "Mahesh Patil",
+    date1: "12/04/2024",
+    review1:
           "Magnjum psum dolor, sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident",
-      },
-      {
-        id: 2,
-        userName: "Mahesh Patil",
-        date: "12/04/2024",
-        review:
-          "Magnjum psum dolor, sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident",
-      },
-    ],
+    userName2: "Mahesh Patil",
+        date2: "12/04/2024",
+        review2:"Magnjum psum dolor, sit amet consectetur adipisicing elit"
   },
+  //   ],
+  // },
   {
     id: "4",
     url1: "https://contents.mediadecathlon.com/p2393847/4d2cc2c91fbaeec4a0a3a00af395c64a/p2393847.jpg?format=auto&quality=70&f=650x0",
@@ -78,23 +58,23 @@ export const ShoeData = [
     url3: "https://contents.mediadecathlon.com/p2393894/ae11c369077717da979826d33db65b1c/p2393894.jpg?format=auto&quality=70&f=650x0",
     name: "Engineer",
     price: 3599.0,
-    comment: [
-      {
-        id: 1,
-        userName: "Mahesh Patil",
-        date: "12/04/2024",
-        review:
+    // comment: [
+    //   {
+    //     id: 1,
+        userName1: "Mahesh Patil",
+        date1: "12/04/2024",
+        review1:
+          "Magnjum psum dolor, sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident",
+      // },
+      // {
+        // id: 2,
+        userName2: "Mahesh Patil",
+        date2: "12/04/2024",
+        review2:
           "Magnjum psum dolor, sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident",
       },
-      {
-        id: 2,
-        userName: "Mahesh Patil",
-        date: "12/04/2024",
-        review:
-          "Magnjum psum dolor, sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident sit amet consectetur adipisicing elit. Magni cupiditate nesciunt ratione neque dolorum molestias! Provident",
-      },
-    ],
-  },
+  //   ],
+  // },
   {
     id: "5",
     url1: "https://t3.ftcdn.net/jpg/02/77/57/08/360_F_277570866_4paYMmM6jGZC70J4wJhRNlML3JzRWJKQ.jpg",

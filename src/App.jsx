@@ -15,15 +15,17 @@ import OrderPlacedPage from './components/OrderPlaced';
 const App = () => {
   const [cartData, setCartData] = useState([]);
   const [total, setTotal] = useState(0);
-
+  const [selectedSize, setSelectedSize] = useState('S');
+  // console.log('222', total)
+  console.log(cartData,'cartData');
   return (
     <>
       <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
-      <Route path="/payment" element={<Payment cartData={cartData} setCartData={setCartData} total={total} setTotal={setTotal} />} />
-      <Route path="/details" element={<Details setCartData={setCartData} />} />
+      <Route path="/payment" element={<Payment cartData={cartData} setCartData={setCartData} total={total} setTotal={setTotal} setSelectedSize={setSelectedSize} selectedSize={selectedSize}/>} />
+      <Route path="/details" element={<Details setCartData={setCartData} selectedSize={selectedSize} setSelectedSize={setSelectedSize}/>} />
       <Route path="/reviews" element={<Reviews />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/about" element={<About />} />
